@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/content.json</loc>
+    <loc>http://example.com/index.html</loc>
     
     <lastmod>2024-10-24</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/index.html</loc>
+    <loc>http://example.com/content.json</loc>
     
     <lastmod>2024-10-24</lastmod>
     
