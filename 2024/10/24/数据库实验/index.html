@@ -164,20 +164,20 @@
 <p>新建数据库，输入库名</p>
 <p><img src="/image-20241023205308267.png" alt="image-20241023205308267"></p>
 <h2 id="2-创建Student表"><a href="#2-创建Student表" class="headerlink" title="2. 创建Student表"></a>2. 创建Student表</h2><p>通过库直接建表：</p>
-<p><img src="/./../image/%E5%AE%9E%E9%AA%8C.assets/image-20241023205358469.png" alt="image-20241023205358469"></p>
+<p><img src="/../../image/%E5%AE%9E%E9%AA%8C.assets/image-20241023205358469.png" alt="image-20241023205358469"></p>
 <p>或者可以通过命令行：</p>
 <p>点击新建查询，输入以下内容</p>
-<p><img src="/./../image/%E5%AE%9E%E9%AA%8C.assets/image-20241023205452083.png" alt="image-20241023205452083"></p>
+<p><img src="/../../image/%E5%AE%9E%E9%AA%8C.assets/image-20241023205452083.png" alt="image-20241023205452083"></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Student(</span><br><span class="line">Sno <span class="type">CHAR</span>(<span class="number">9</span>) <span class="keyword">PRIMARY</span> KEY,</span><br><span class="line">Sname <span class="type">CHAR</span>(<span class="number">20</span>) <span class="keyword">UNIQUE</span>,</span><br><span class="line">Ssex <span class="type">CHAR</span>(<span class="number">2</span>),</span><br><span class="line">Sage <span class="type">SMALLINT</span>,</span><br><span class="line">Sdept <span class="type">CHAR</span>(<span class="number">20</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
 <p>输入数据，右键对应的表，编辑前200行：</p>
-<p><img src="/./../image/%E5%AE%9E%E9%AA%8C.assets/image-20241023205628386.png" alt="image-20241023205628386"></p>
+<p><img src="/../../image/%E5%AE%9E%E9%AA%8C.assets/image-20241023205628386.png" alt="image-20241023205628386"></p>
 <p>按行输入数据：</p>
-<p><img src="/./../image/%E5%AE%9E%E9%AA%8C.assets/image-20241023205711197.png" alt="image-20241023205711197"></p>
+<p><img src="/../../image/%E5%AE%9E%E9%AA%8C.assets/image-20241023205711197.png" alt="image-20241023205711197"></p>
 <p>或者命令行输入数据：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Student (Sno, Sname, Ssex, Sage, Sdept)</span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">(<span class="string">&#x27;201215121&#x27;</span>, <span class="string">&#x27;李勇&#x27;</span>, <span class="string">&#x27;男&#x27;</span>, <span class="number">20</span>, <span class="string">&#x27;CS&#x27;</span>),</span><br><span class="line">(<span class="string">&#x27;201215122&#x27;</span>, <span class="string">&#x27;刘晨&#x27;</span>, <span class="string">&#x27;女&#x27;</span>, <span class="number">19</span>, <span class="string">&#x27;CS&#x27;</span>),</span><br><span class="line">(<span class="string">&#x27;201215123&#x27;</span>, <span class="string">&#x27;王敏&#x27;</span>, <span class="string">&#x27;女&#x27;</span>, <span class="number">18</span>, <span class="string">&#x27;MA&#x27;</span>),</span><br><span class="line">(<span class="string">&#x27;201215125&#x27;</span>, <span class="string">&#x27;张立&#x27;</span>, <span class="string">&#x27;男&#x27;</span>, <span class="number">19</span>, <span class="string">&#x27;IS&#x27;</span>);</span><br></pre></td></tr></table></figure>
 
-<p><img src="/./../image/%E5%AE%9E%E9%AA%8C.assets/image-20241023211214737.png" alt="image-20241023211214737"></p>
+<p><img src="/../../image/%E5%AE%9E%E9%AA%8C.assets/image-20241023211214737.png" alt="image-20241023211214737"></p>
 <h2 id="3-建立Course表"><a href="#3-建立Course表" class="headerlink" title="3. 建立Course表"></a>3. 建立Course表</h2><p>用命令行：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Course (</span><br><span class="line">    Cno <span class="type">VARCHAR</span>(<span class="number">4</span>) <span class="keyword">PRIMARY</span> KEY,</span><br><span class="line">    Cname <span class="type">VARCHAR</span>(<span class="number">40</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">    Cpno <span class="type">VARCHAR</span>(<span class="number">4</span>),</span><br><span class="line">    Ccredit <span class="type">SMALLINT</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
@@ -276,38 +276,38 @@
 <p>第二部分：</p>
 <h2 id="题目2"><a href="#题目2" class="headerlink" title="题目2"></a>题目2</h2><p>2 查询全体学生学号和姓名</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sno, Sname</span><br><span class="line"><span class="keyword">FROM</span> Student;</span><br></pre></td></tr></table></figure>
-<p><img src="/mage-20241024230724019.png" alt="image-20241024230724019"></p>
+<p><img src="/image-20241024230724019.png" alt="image-20241024230724019"></p>
 <h2 id="题目3"><a href="#题目3" class="headerlink" title="题目3"></a>题目3</h2><p>3 查询全体学生学号、姓名、性别、年龄和所在系</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sno, Sname, Ssex, Sage, Sdept</span><br><span class="line"><span class="keyword">FROM</span> Student;</span><br></pre></td></tr></table></figure>
-<p><img src="/./../image/photo/%7B532B5A25-1D04-4EC3-94D5-5940F3E5B612%7D.png"></p>
+<p><img src="/../../image/photo/%7B532B5A25-1D04-4EC3-94D5-5940F3E5B612%7D.png"></p>
 <h2 id="题目4"><a href="#题目4" class="headerlink" title="题目4"></a>题目4</h2><p>4 查询全体学生选课情况，即学号、课程号、成绩 </p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sno, Cno, Grade</span><br><span class="line"><span class="keyword">FROM</span> SC; </span><br></pre></td></tr></table></figure>
-<p><img src="/./../image/photo/%7BC0BC4434-50F2-4616-88A1-EE6697FDF60C%7D.png"></p>
+<p><img src="/../../image/photo/%7BC0BC4434-50F2-4616-88A1-EE6697FDF60C%7D.png"></p>
 <h2 id="题目5"><a href="#题目5" class="headerlink" title="题目5"></a>题目5</h2><p>5 显示所有选课学生的学号，并取掉重复行</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> Sno</span><br><span class="line"><span class="keyword">FROM</span> SC;</span><br></pre></td></tr></table></figure>
-<p><img src="/./../image/photo/%7B07249E10-4999-4CB2-A6C1-8A15E1C09ECB%7D.png"></p>
+<p><img src="/../../image/photo/%7B07249E10-4999-4CB2-A6C1-8A15E1C09ECB%7D.png"></p>
 <h2 id="题目6"><a href="#题目6" class="headerlink" title="题目6"></a>题目6</h2><p>6 查询成绩大于80分的学生的学号、课程号、成绩</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sno, Cno, Grade</span><br><span class="line"><span class="keyword">FROM</span> SC</span><br><span class="line"><span class="keyword">WHERE</span> Grade <span class="operator">&gt;</span> <span class="number">80</span>;</span><br></pre></td></tr></table></figure>
-<p><img src="/./../image/photo/%7BD286BFB8-DAB7-4A46-888A-FDA86BF25DF2%7D.png"></p>
+<p><img src="/../../image/photo/%7BD286BFB8-DAB7-4A46-888A-FDA86BF25DF2%7D.png"></p>
 <h2 id="题目7"><a href="#题目7" class="headerlink" title="题目7"></a>题目7</h2><p>7 查询计算机系全体学生的学号</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sno</span><br><span class="line"><span class="keyword">FROM</span> Student</span><br><span class="line"><span class="keyword">WHERE</span> Sdept <span class="operator">=</span> <span class="string">&#x27;CS&#x27;</span>;   <span class="comment">--单引号</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p><img src="/./../image/photo/%7B0CFA1AF7-AB57-4717-A38A-15CBC8CDE92E%7D.png"></p>
+<p><img src="/../../image/photo/%7B0CFA1AF7-AB57-4717-A38A-15CBC8CDE92E%7D.png"></p>
 <h2 id="题目8"><a href="#题目8" class="headerlink" title="题目8"></a>题目8</h2><p>8 查询计算机系年龄在18岁以上的学生的学号、姓名</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sno, Sname</span><br><span class="line"><span class="keyword">FROM</span> Student</span><br><span class="line"><span class="keyword">WHERE</span> Sdept <span class="operator">=</span> <span class="string">&#x27;CS&#x27;</span> <span class="keyword">AND</span> Sage <span class="operator">&gt;</span> <span class="number">18</span>;  <span class="comment">--用AND</span></span><br></pre></td></tr></table></figure>
-<p><img src="/./../image/photo/%7B502CBD42-60C0-4323-A320-FCC733FB7543%7D.png"></p>
+<p><img src="/../../image/photo/%7B502CBD42-60C0-4323-A320-FCC733FB7543%7D.png"></p>
 <h2 id="题目9"><a href="#题目9" class="headerlink" title="题目9"></a>题目9</h2><p>9 查询选修了数据库课程或数据结构课程学生的学号、成绩</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sno, Grade</span><br><span class="line"><span class="keyword">FROM</span> SC</span><br><span class="line"><span class="keyword">WHERE</span> Cno <span class="operator">=</span> <span class="string">&#x27;1&#x27;</span> <span class="keyword">OR</span> Cno <span class="operator">=</span> <span class="string">&#x27;5&#x27;</span>;</span><br></pre></td></tr></table></figure>
-<p><img src="/./../image/photo/%7BDB50E20B-79E8-425E-885F-F9FE4110530C%7D.png"></p>
+<p><img src="/../../image/photo/%7BDB50E20B-79E8-425E-885F-F9FE4110530C%7D.png"></p>
 <h2 id="题目10"><a href="#题目10" class="headerlink" title="题目10"></a>题目10</h2><p>10 查询选修了C1课程的学生的学号和成绩，查询结果按成绩降序排序</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sno, Grade</span><br><span class="line"><span class="keyword">FROM</span> SC</span><br><span class="line"><span class="keyword">WHERE</span> Cno <span class="operator">=</span> <span class="string">&#x27;1&#x27;</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> Grade <span class="keyword">DESC</span>;</span><br></pre></td></tr></table></figure>
-<p><img src="/./../image/photo/%7BBE5EF5E2-8FF5-473D-AC99-368C04C23355%7D.png"></p>
+<p><img src="/../../image/photo/%7BBE5EF5E2-8FF5-473D-AC99-368C04C23355%7D.png"></p>
 <h2 id="题目11"><a href="#题目11" class="headerlink" title="题目11"></a>题目11</h2><p>11 查询每个学生的学号、姓名、选修的课程名、成绩</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Student.Sno, Student.Sname, Course.Cname, SC.Grade</span><br><span class="line"><span class="keyword">FROM</span> Student</span><br><span class="line"><span class="keyword">JOIN</span> SC <span class="keyword">ON</span> Student.Sno <span class="operator">=</span> SC.Sno</span><br><span class="line"><span class="keyword">JOIN</span> Course <span class="keyword">ON</span> SC.Cno <span class="operator">=</span> Course.Cno;</span><br></pre></td></tr></table></figure>
-<p><img src="/./../image/photo/%7B7F2F6414-4BFC-4243-80BA-A9EBDF573710%7D.png"></p>
+<p><img src="/../../image/photo/%7B7F2F6414-4BFC-4243-80BA-A9EBDF573710%7D.png"></p>
 <h2 id="题目12"><a href="#题目12" class="headerlink" title="题目12"></a>题目12</h2><p>12 查询与‘李勇’在同一个系学习的学生学号、姓名</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sno, Sname</span><br><span class="line"><span class="keyword">FROM</span> Student</span><br><span class="line"><span class="keyword">WHERE</span> Sdept <span class="operator">=</span> (<span class="keyword">SELECT</span> Sdept <span class="keyword">FROM</span> Student <span class="keyword">WHERE</span> Sname <span class="operator">=</span> <span class="string">&#x27;李勇&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<p><img src="/./../image/photo/%7B47B3D390-ADDB-4887-B249-B71D7C1229A8%7D.png"></p>
+<p><img src="/../../image/photo/%7B47B3D390-ADDB-4887-B249-B71D7C1229A8%7D.png"></p>
 <h2 id="题目13"><a href="#题目13" class="headerlink" title="题目13"></a>题目13</h2><p>13 查询选修了3门以上课程的学生学号</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sno</span><br><span class="line"><span class="keyword">FROM</span> SC</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> Sno <span class="operator">/</span><span class="operator">/</span>根据学号进行分组</span><br><span class="line"><span class="keyword">HAVING</span> <span class="built_in">COUNT</span>(Cno) <span class="operator">&gt;</span> <span class="number">3</span>; <span class="operator">/</span><span class="operator">/</span>筛选学号中满足特定条件的组</span><br></pre></td></tr></table></figure>
 <p><code>HAVING</code> 子句用于 <strong>过滤分组后的数据</strong>，通常和 <code>GROUP BY</code> 子句一起使用。它的作用类似于 <code>WHERE</code>，但不同之处在于：</p>
@@ -361,26 +361,26 @@
 </tbody></table>
 <ul>
 <li><strong><code>GROUP BY</code></strong> 用于对数据进行分组，并计算每个分组的汇总信息。</li>
-<li><strong><code>ORDER BY</code></strong> 用于对查询结果进行排序，不改变数据，只改变结果的排列顺序。<br><img src="/./../image/photo/%7BCACDDEDB-6EE8-4E2A-BBDE-F583DD14EAEA%7D.png"></li>
+<li><strong><code>ORDER BY</code></strong> 用于对查询结果进行排序，不改变数据，只改变结果的排列顺序。<br><img src="/../../image/photo/%7BCACDDEDB-6EE8-4E2A-BBDE-F583DD14EAEA%7D.png"></li>
 </ul>
 <h2 id="题目14"><a href="#题目14" class="headerlink" title="题目14"></a>题目14</h2><p>14 查询没有选修课程的学生的基本信息</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span> Student</span><br><span class="line"><span class="keyword">WHERE</span> Sno <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="keyword">SELECT</span> Sno <span class="keyword">FROM</span> SC);</span><br></pre></td></tr></table></figure>
-<p><img src="/./../image/photo/%7B18529D94-2C65-4A99-87A7-829B1DF0E8A6%7D.png"></p>
+<p><img src="/../../image/photo/%7B18529D94-2C65-4A99-87A7-829B1DF0E8A6%7D.png"></p>
 <h2 id="题目15"><a href="#题目15" class="headerlink" title="题目15"></a>题目15</h2><p>15 找出平均成绩在85分以上的学生，结果按系分组，并按平均成绩的升序排列</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Student.Sdept, Student.Sno, <span class="built_in">AVG</span>(SC.Grade) <span class="keyword">AS</span> AvgGrade</span><br><span class="line"><span class="keyword">FROM</span> Student</span><br><span class="line"><span class="keyword">JOIN</span> SC <span class="keyword">ON</span> Student.Sno <span class="operator">=</span> SC.Sno</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> Student.Sdept, Student.Sno </span><br><span class="line"><span class="comment">--根据学生的系别（`Sdept`）和学号（`Sno`）对结果进行分组。</span></span><br><span class="line"><span class="keyword">HAVING</span> <span class="built_in">AVG</span>(SC.Grade) <span class="operator">&gt;</span> <span class="number">85</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> AvgGrade <span class="keyword">ASC</span>;</span><br></pre></td></tr></table></figure>
 <p>&#x2F;&#x2F;**<code>AVG(SC.Grade) AS AvgGrade</code>**：计算每个学生的平均成绩，并将结果命名为 <code>AvgGrade</code>。</p>
 <ul>
 <li>使用 <code>JOIN</code> 关键字将 <code>Student</code> 表和 <code>SC</code> 表连接在一起。</li>
-<li><code>ON Student.Sno = SC.Sno</code>：指定连接条件，即通过学号（<code>Sno</code>）将两张表关联起来。这样可以获取每个学生的成绩信息。<br><img src="/./../image/photo/%7B807C4536-537D-4846-904C-CC669CCBADFF%7D.png"></li>
+<li><code>ON Student.Sno = SC.Sno</code>：指定连接条件，即通过学号（<code>Sno</code>）将两张表关联起来。这样可以获取每个学生的成绩信息。<br><img src="/../../image/photo/%7B807C4536-537D-4846-904C-CC669CCBADFF%7D.png"></li>
 </ul>
 <h2 id="题目16"><a href="#题目16" class="headerlink" title="题目16"></a>题目16</h2><p>16查询选修课程平均成绩在80分以上的学生学号</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sno</span><br><span class="line"><span class="keyword">FROM</span> SC</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> Sno</span><br><span class="line"><span class="keyword">HAVING</span> <span class="built_in">AVG</span>(Grade) <span class="operator">&gt;</span> <span class="number">80</span>;</span><br></pre></td></tr></table></figure>
-<p><img src="/./../image/photo/%7B684B6022-201A-4421-93CD-C0B62E6ACC92%7D.png"></p>
+<p><img src="/../../image/photo/%7B684B6022-201A-4421-93CD-C0B62E6ACC92%7D.png"></p>
 <h2 id="题目17"><a href="#题目17" class="headerlink" title="题目17"></a>题目17</h2><p>17查询数据结构课程的先行课的先行课课程名</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> C2.Cname <span class="keyword">AS</span> PrePreCourse</span><br><span class="line"><span class="keyword">FROM</span> Course C1  <span class="operator">/</span><span class="operator">/</span>指定数据源为 `Course` 表，并给它一个别名 `C1`。这个别名用于后续的引用</span><br><span class="line"><span class="keyword">JOIN</span> Course C2 <span class="keyword">ON</span> C1.Cpno <span class="operator">=</span> C2.Cno</span><br><span class="line"><span class="keyword">WHERE</span> C1.Cno <span class="operator">=</span> <span class="string">&#x27;5&#x27;</span>;</span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>JOIN</code> 允许我们把 <code>Course C1</code> 和 <code>Course C2</code> 的相关信息组合起来，这样我们就能从查询到的结果中返回前置课程的名称，而不是编号。</li>
-<li>最终，我们根据 <code>C1.Cno = &#39;5&#39;</code> 的条件，查询编号为 <code>5</code> 的课程的前置课程，并通过 <code>JOIN</code> 得到前置课程的名称。<br><img src="/./../image/photo/%7B2831229C-D56E-4AB2-8C98-19AE38633DCC%7D.png"></li>
+<li>最终，我们根据 <code>C1.Cno = &#39;5&#39;</code> 的条件，查询编号为 <code>5</code> 的课程的前置课程，并通过 <code>JOIN</code> 得到前置课程的名称。<br><img src="/../../image/photo/%7B2831229C-D56E-4AB2-8C98-19AE38633DCC%7D.png"></li>
 </ul>
 <h2 id="题目18"><a href="#题目18" class="headerlink" title="题目18"></a>题目18</h2><p>18 查询同时选修《数据库》和《数据结构》两门课程的学生姓名</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname </span><br><span class="line"><span class="keyword">FROM</span> SC <span class="keyword">AS</span> SC1</span><br><span class="line"><span class="keyword">JOIN</span> SC <span class="keyword">AS</span> SC2 <span class="keyword">ON</span> SC1.Sno <span class="operator">=</span> SC2.Sno</span><br><span class="line"><span class="keyword">JOIN</span> Student  <span class="keyword">ON</span> SC1.Sno <span class="operator">=</span> Student.Sno</span><br><span class="line"><span class="keyword">WHERE</span> SC1.Cno <span class="operator">=</span> <span class="string">&#x27;1&#x27;</span> <span class="keyword">AND</span> SC2.Cno <span class="operator">=</span> <span class="string">&#x27;5&#x27;</span>;</span><br></pre></td></tr></table></figure>
@@ -392,12 +392,12 @@
 <ul>
 <li>在这一步，我们将 <code>SC</code> 表和 <code>Student</code> 表连接起来，关联 <code>SC1.Sno</code> 和 <code>Student</code> 表中的 <code>Sno</code>。</li>
 </ul>
-<p><img src="/./../image/photo/%7BAC264E88-10EE-4DF7-B651-6236D25C882D%7D.png"></p>
+<p><img src="/../../image/photo/%7BAC264E88-10EE-4DF7-B651-6236D25C882D%7D.png"></p>
 <h2 id="题目19"><a href="#题目19" class="headerlink" title="题目19"></a>题目19</h2><p>19 查询每个系的平均年龄，并建立视图</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span> AvgAgeByDept <span class="keyword">AS</span></span><br><span class="line"><span class="keyword">SELECT</span> Sdept, <span class="built_in">AVG</span>(Sage) <span class="keyword">AS</span> AvgAge</span><br><span class="line"><span class="keyword">FROM</span> Student</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> Sdept;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>GREATE VIEW创建视图，后面是自定义的名称，AS表示后面讲定义这个视图的查询内容<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> AvgAgeByDept;</span><br></pre></td></tr></table></figure>
-<img src="/./../image/photo/%7BD3C0B4B6-A44B-4AED-A4C9-7E629A9763A7%7D.png"></li>
+<img src="/../../image/photo/%7BD3C0B4B6-A44B-4AED-A4C9-7E629A9763A7%7D.png"></li>
 </ul>
 <h2 id="题目20"><a href="#题目20" class="headerlink" title="题目20"></a>题目20</h2><p>20 建立课程的先修课程的视图</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span> PrerequisiteCourses <span class="keyword">AS</span></span><br><span class="line"><span class="keyword">SELECT</span> C1.Cno <span class="keyword">AS</span> CourseNo, C1.Cname <span class="keyword">AS</span> CourseName, C2.Cname <span class="keyword">AS</span> PrerequisiteName</span><br><span class="line"><span class="keyword">FROM</span> Course C1</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">JOIN</span> Course C2 <span class="keyword">ON</span> C1.Cpno <span class="operator">=</span> C2.Cno;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -410,7 +410,7 @@
 </ul>
 </li>
 <li>只有当 <code>C1.Cpno</code> 的值与 <code>C2.Cno</code> 的值相等时，才会将这两个表中的记录组合在一起。<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> PrerequisiteCourses;</span><br></pre></td></tr></table></figure>
-<img src="/./../image/photo/%7B3361F476-B1C4-4BFE-A918-05B5734E5112%7D.png"></li>
+<img src="/../../image/photo/%7B3361F476-B1C4-4BFE-A918-05B5734E5112%7D.png"></li>
 </ul>
 </li>
 </ul>
