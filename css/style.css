@@ -1714,32 +1714,45 @@ code {
 
 
 .memory-cards{
-    display:flex;
-    justify-content:center;
-    gap:80px;
-    margin-top:80px;
-    flex-wrap:wrap;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+margin-top:40px;
 }
 
 .memory-card{
-    width:320px;
-    text-align:center;
-    text-decoration:none;
-    color:inherit;
+width:240px;
+text-align:center;
+text-decoration:none;
+color:inherit;
 }
 
 .memory-card img{
-    width:100%;
-    border-radius:12px;
-    transition:0.3s;
+width:100%;
+border-radius:10px;
+transition:0.3s;
 }
 
 .memory-card img:hover{
-    transform:translateY(-8px);
+transform:translateY(-5px);
 }
 
 .memory-card h2{
-    margin-top:20px;
-    font-size:1.8rem;
-    font-weight:400;
+margin-top:15px;
+font-size:1.1rem;
+}
+
+.archive-cover{
+    display:block;
+    width:260px;
+    margin-bottom:12px;
+}
+
+.memory-list{
+    margin-top:40px;
+}
+
+.memory-list li{
+    margin-bottom:20px;
 }
