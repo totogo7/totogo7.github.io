@@ -1711,3 +1711,35 @@ code {
     opacity:.6;
     letter-spacing:3px;
 }
+
+
+.memory-cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+margin-top:40px;
+}
+
+.memory-card{
+width:240px;
+text-align:center;
+text-decoration:none;
+color:inherit;
+}
+
+.memory-card img{
+width:100%;
+border-radius:10px;
+transition:0.3s;
+}
+
+.memory-card img:hover{
+transform:translateY(-5px);
+}
+
+.memory-card h2{
+margin-top:15px;
+font-size:1.1rem;
+}
+
