@@ -1676,3 +1676,39 @@ code {
     margin:0 auto 20px;
     opacity:0.9;
 }
+
+/* Graduation Memories */
+
+#memories{
+    text-align:center;
+    margin-top:70px;
+    margin-bottom:100px;
+}
+
+.memory-link{
+    text-decoration:none;
+    color:inherit;
+}
+
+.graduation-icon{
+    width:100px;
+    height:auto;
+    margin-bottom:20px;
+    transition:0.3s ease;
+}
+
+.graduation-icon:hover{
+    transform:translateY(-5px);
+}
+
+.memory-title{
+    font-size:1.6rem;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.memory-year{
+    font-size:0.9rem;
+    opacity:0.6;
+    letter-spacing:3px;
+}
