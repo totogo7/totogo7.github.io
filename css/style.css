@@ -1742,4 +1742,9 @@ transform:translateY(-5px);
 margin-top:15px;
 font-size:1.1rem;
 }
+.video-cover{
+width:220px;
+display:block;
+margin-bottom:10px;
+}
 
