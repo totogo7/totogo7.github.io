@@ -1742,9 +1742,17 @@ transform:translateY(-5px);
 margin-top:15px;
 font-size:1.1rem;
 }
-.video-cover{
-width:220px;
-display:block;
-margin-bottom:10px;
+
+.archive-cover{
+    display:block;
+    width:260px;
+    margin-bottom:12px;
 }
 
+.memory-list{
+    margin-top:40px;
+}
+
+.memory-list li{
+    margin-bottom:20px;
+}
